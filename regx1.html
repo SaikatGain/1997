@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regx Function</title>
+    <script type="text/javascript">
+    function abcd()
+    {
+        var user=document.getElementById("user").value;
+        var regx=/[a-x]00/;
+        if(regx.test(user))
+        {
+            alert("Valid username");
+            document.getElementById("lbluser").style.visibility="hidden";
+           
+        }
+        else
+        {
+            document.getElementById("lbluser").style.visibility="visible";
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="user" placeholder="Enter UserID">
+    <label id="lbluser" style="color: red; visibility: hidden;">Wrong UserName</label>
+    <br><br>
+    <button type="button" onclick="abcd()">LogIn</button>
+</body>
+</html>

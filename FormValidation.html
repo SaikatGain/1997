@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="form.js" type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <h1>Welcome to LogIn Page</h1>
+    <br>
+    <h2>LogIn to Go Further</h2>
+    <form onsubmit="return abc()" action="loginSuccessful.html">
+        
+        <input type="text" id="user" placeholder="Enter UserName">
+        <label id="lbluser" style="color: crimson; visibility: hidden;">Wrong Username</label>
+        <br><br>
+        <input type="password" id="pass" placeholder="Enter PassWord">
+        <label id="lblpass" style="color: crimson; visibility: hidden;">Wrong Password</label>
+        <br><br>
+        <button type="submit">LogIn</button>
+    </form>
+    
+</body>
+</html>

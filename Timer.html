@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <script type="text/javascript">
+    var Id=0;
+    var seconds=0;
+    function printmsg()
+    {
+        document.getElementById("time").innerHTML=seconds+" seconds";
+        seconds++;
+        
+    }
+    function start()
+    {
+        Id=window.setTimeout(printmsg,1000);
+            
+        
+    }
+
+    function stop()
+    {
+        window.clearTimeout(Id);
+    }
+     
+    </script>
+</head>
+<body>
+    <div style="padding-left: 40ch;">
+    <h4>Time</h4>
+    <br>
+    <h2 id="time"></h2>
+    <br>
+    <button type="button" onclick="start()">Start</button>
+    <button type="button" onclick="stop()">Stop</button>
+    </div>
+</body>
+</html>
