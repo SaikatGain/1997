@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Validation</title>
+    <script type="text/javascript">
+    function valid()
+    { 
+    //var "a" to get the input form the text element// 
+        var a=document.getElementById("phone").value;
+        //pattren mathching is done on the next line as Indian Stander all number should start within 6 to 9 so the starting pattern is between 6 to 9 And after that the pattern within 0-9 in 9 times as indian number content 10 digites//
+        var rex=/[6-9][0-9]{9}/;
+        //check the input pattern //
+        if(rex.test(a))
+        {
+            document.getElementById("lblphone").innerHTML="Valid Number";
+            document.getElementById("lblphone").style.visibility="visible";
+            document.getElementById("lblphone").style.color="green";
+            return false;
+        }
+        else
+        {
+            document.getElementById("lblphone").style.visibility="visible";
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form onsubmit="return valid()" action="logsucces.html">
+    <br><br>
+    <input type="text" placeholder="Phone Number" id="phone">
+    <label id="lblphone" style="color: red;visibility: hidden;" >Invalide Mobile Number</label>
+    <br><br>
+    <button type="submit">Find It</button>
+</form>
+</body>
+</html>
